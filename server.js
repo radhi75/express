@@ -10,7 +10,7 @@ const day = workingdays[date.getDay() - 1];
 const hour = date.getHours();
 // const hour = 18;
 const x = (req, res, next) => {
-  if (workingdays.includes(day) && hour >= 9 && hour <= 24) {
+  if (workingdays.includes(day) && hour >= 9 && hour <= 17) {
     next();
   } else {
     res.render("closed");
